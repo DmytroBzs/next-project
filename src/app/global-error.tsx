@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 
-export interface GlobalErrorProps {
-  // props
-}
-
-export default function GlobalError({}: GlobalErrorProps) {
+export default function GlobalError() {
   return (
     <html>
       <body>
