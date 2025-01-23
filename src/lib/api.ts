@@ -99,10 +99,11 @@ export const getPromotions = async (
   params: Record<string, string> = {},
   init?: RequestInit,
 ) => {
-  return sendRequest<Promotion[]>(
+  const promotion = await sendRequest<Promotion[]>(
     `${buildUrl('promotions')}?${stringifyQueryParams(params)}`,
     init,
   );
+  return promotion.slice(0, 10);
 };
 
 export const createCompany = async (
